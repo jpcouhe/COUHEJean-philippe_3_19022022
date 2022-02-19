@@ -1,4 +1,4 @@
-header, .reservation .reservation_localisation, .reservation .reservation_header {
+header, .reservation .reservation_localisation, .reservation .reservation_header, .restaurant_card .restaurant_card_info, .restaurant_card .restaurant_card_info strong {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -23,6 +23,11 @@ html {
 
 body {
   font-family: 'Roboto', sans-serif;
+}
+
+h2 {
+  font-size: 2.4rem;
+  font-weight: 700;
 }
 
 header {
@@ -96,8 +101,6 @@ button:hover::after {
 .reservation .reservation_header h2 {
   margin-bottom: 25px;
   text-align: center;
-  font-size: 2.4rem;
-  font-weight: 700;
 }
 
 .reservation .reservation_header p {
@@ -109,10 +112,6 @@ button:hover::after {
 
 .functioning {
   padding: 50px 20px;
-}
-
-.functioning h2 {
-  font-size: 2.4rem;
 }
 
 .functioning .functioning_box {
@@ -158,4 +157,89 @@ button:hover::after {
 
 .functioning .functioning_box:hover i {
   color: #9356DC;
+}
+
+.restaurant {
+  padding: 0 20px;
+}
+
+.restaurant_card {
+  margin: 20px 0;
+  border-radius: 25px;
+  -webkit-box-shadow: 0px 5px 10px -5px rgba(0, 0, 0, 0.4);
+          box-shadow: 0px 5px 10px -5px rgba(0, 0, 0, 0.4);
+  position: relative;
+}
+
+.restaurant_card .restaurant_card_img {
+  height: 180px;
+  width: auto;
+}
+
+.restaurant_card .restaurant_card_img img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 25px 25px 0 0;
+}
+
+.restaurant_card .restaurant_card_info {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 80px;
+  padding: 20px;
+  background-color: white;
+  border-radius: 0 0 25px 25px;
+}
+
+.restaurant_card .restaurant_card_info .restaurant_card_text h3 {
+  font-size: 1.7rem;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.restaurant_card .restaurant_card_info .restaurant_card_text p {
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+
+.restaurant_card .restaurant_card_info .restaurant_card_heart {
+  position: relative;
+}
+
+.restaurant_card .restaurant_card_info .restaurant_card_heart i {
+  font-size: 2.4rem;
+}
+
+.restaurant_card .restaurant_card_info .restaurant_card_heart svg {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  opacity: 0;
+}
+
+.restaurant_card .restaurant_card_info .restaurant_card_heart svg:hover {
+  cursor: pointer;
+  -webkit-transition: opacity .8s ease-out;
+  transition: opacity .8s ease-out;
+  opacity: 1;
+}
+
+.restaurant_card .restaurant_card_info strong {
+  position: absolute;
+  top: 15px;
+  right: 10px;
+  height: 30px;
+  width: 80px;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #008766;
+  background: #99e2d0;
+  border-radius: 5px;
 }
