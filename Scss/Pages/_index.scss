@@ -1,12 +1,13 @@
 .reservation {
     .reservation_localisation {
-        font-size: 1.5rem;
+        font-size: 1.8rem;
         font-weight: 600;
         height: 50px;
         width: 100%;
         background-color: $bgcolor_dark;
         @extend %flex-center;
 // margin -left pour aligner Titre header et Logo Pin ? 
+
         i{
             margin-right: 20px;
         }

@@ -30,6 +30,11 @@ h2 {
   font-weight: 700;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 header {
   height: 65px;
   font-size: 1.5rem;
@@ -44,28 +49,33 @@ footer {
   padding: 30px;
 }
 
-footer img {
+footer .footer_container {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+footer .footer_container img {
   -webkit-filter: brightness(0) invert(1);
           filter: brightness(0) invert(1);
   width: 100px;
 }
 
-footer ul {
+footer .footer_container ul {
   margin-top: 20px;
 }
 
-footer ul li {
+footer .footer_container ul li {
   list-style-type: none;
   padding: 5px;
 }
 
-footer ul li a {
+footer .footer_container ul li a {
   color: white;
   text-decoration: none;
   font-size: 1.4rem;
 }
 
-footer ul li a i {
+footer .footer_container ul li a i {
   height: 15px;
   width: 15px;
   margin-right: 15px;
@@ -110,7 +120,7 @@ button:hover::after {
 }
 
 .reservation .reservation_localisation {
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   font-weight: 600;
   height: 50px;
   width: 100%;
@@ -145,12 +155,28 @@ button:hover::after {
 
 .functioning {
   padding: 50px 20px;
+  max-width: 1440px;
+  margin: 0 auto;
 }
 
-.functioning .functioning_box {
+@media (min-width: 480px) {
+  .functioning .functioning_container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
+.functioning .functioning_container .functioning_box {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   margin: 20px 0;
   padding: 30px;
   font-size: 1.5rem;
@@ -160,15 +186,22 @@ button:hover::after {
   -webkit-box-shadow: 0px 5px 10px -5px rgba(0, 0, 0, 0.4);
           box-shadow: 0px 5px 10px -5px rgba(0, 0, 0, 0.4);
   position: relative;
+  cursor: pointer;
 }
 
-.functioning .functioning_box i {
+@media (min-width: 480px) {
+  .functioning .functioning_container .functioning_box {
+    width: 350px;
+  }
+}
+
+.functioning .functioning_container .functioning_box i {
   margin-right: 20px;
   font-size: 1.8rem;
   color: rgba(0, 0, 0, 0.5);
 }
 
-.functioning .functioning_box::before {
+.functioning .functioning_container .functioning_box::before {
   content: attr(data-count);
   position: absolute;
   top: 50%;
@@ -184,16 +217,31 @@ button:hover::after {
   border-radius: 50%;
 }
 
-.functioning .functioning_box:hover {
+.functioning .functioning_container .functioning_box:hover {
   background-color: #f5edff;
 }
 
-.functioning .functioning_box:hover i {
+.functioning .functioning_container .functioning_box:hover i {
   color: #9356DC;
 }
 
 .restaurant {
   padding: 0 20px;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+@media (min-width: 720px) {
+  .restaurant .restaurant_container {
+    display: -ms-grid;
+    display: grid;
+    -webkit-column-gap: 40px;
+            column-gap: 40px;
+    row-gap: 20px;
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+    margin-bottom: 30px;
+  }
 }
 
 .restaurant_card {
@@ -204,9 +252,21 @@ button:hover::after {
   position: relative;
 }
 
+@media (min-width: 720px) {
+  .restaurant_card {
+    margin-bottom: 0;
+  }
+}
+
 .restaurant_card .restaurant_card_img {
   height: 180px;
   width: auto;
+}
+
+@media (min-width: 1200px) {
+  .restaurant_card .restaurant_card_img {
+    height: 250px;
+  }
 }
 
 .restaurant_card .restaurant_card_img img {
