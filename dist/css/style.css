@@ -1,3 +1,108 @@
-h1 {
-  color: red;
+header, .reservation .reservation_localisation, .reservation .reservation_header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+*, ::after, ::before {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+header {
+  height: 65px;
+  font-size: 1.5rem;
+  font-family: "Shrikhand", cursive;
+  -webkit-box-shadow: 0px 2px 13px -5px rgba(0, 0, 0, 0.3);
+          box-shadow: 0px 2px 13px -5px rgba(0, 0, 0, 0.3);
+}
+
+button {
+  font-size: 1.4rem;
+  padding: 15px;
+  color: #FFF;
+  background: linear-gradient(170deg, #FF79DA, #9356DC);
+  outline: none;
+  border: none;
+  border-radius: 25px;
+  -webkit-box-shadow: 0px 5px 10px -5px rgba(0, 0, 0, 0.5);
+          box-shadow: 0px 5px 10px -5px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  position: relative;
+}
+
+button::after {
+  content: "";
+  display: block;
+  position: absolute;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  -webkit-transform: translate(0, 0);
+          transform: translate(0, 0);
+  background-color: rgba(255, 255, 255, 0.2);
+  -webkit-box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.6);
+          box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  border-radius: 25px;
+  -webkit-transition: opacity 250ms;
+  transition: opacity 250ms;
+}
+
+button:hover::after {
+  opacity: 0.7;
+}
+
+.reservation .reservation_localisation {
+  font-size: 1.5rem;
+  font-weight: 600;
+  height: 50px;
+  width: 100%;
+  background-color: #eaeaea;
+}
+
+.reservation .reservation_localisation i {
+  margin-right: 20px;
+}
+
+.reservation .reservation_header {
+  width: 100%;
+  padding: 45px 30px;
+  background-color: #f6f6f6;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.reservation .reservation_header h2 {
+  margin-bottom: 25px;
+  text-align: center;
+  font-size: 2.4rem;
+  font-weight: 700;
+}
+
+.reservation .reservation_header p {
+  margin-bottom: 30px;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 300;
 }

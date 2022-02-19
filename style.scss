@@ -1,3 +1,10 @@
-h1{
-    color :red;
-}
+@import "./Scss/Utils/mixins";
+@import "./Scss/Utils/variables";
+@import "./Scss/Utils/placeholders";
+
+@import "./Scss/Base/base";
+@import "./Scss/Layout/header";
+
+@import "./Scss/Composants/buttons";
+
+@import "./Scss/Pages/index"

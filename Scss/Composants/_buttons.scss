@@ -1,0 +1,27 @@
+button {
+    font-size: 1.4rem;
+    padding: 15px;
+    color: $buttoncolor;
+    @include bg-gradient($primary, $secondary);
+    outline: none;
+    border: none;
+    border-radius: 25px;
+    box-shadow: 0px 5px 10px -5px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    position: relative;
+    // Opacity to not Paint Calcul by user and diminution of FPS
+    &::after {
+        @include pseudo-el;
+        @include absolute-el(0, 0, 0, 0, 0, 0);
+        background-color: rgba(255, 255, 255, 0.2);
+        box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.6);
+        opacity: 0;
+        border-radius: 25px;
+        transition: opacity 250ms;
+    }
+    &:hover {
+        &::after {
+            opacity: 0.7;
+        }
+    }
+}
