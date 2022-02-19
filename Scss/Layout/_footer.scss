@@ -1,0 +1,32 @@
+footer{
+    background-color: $bgcolor_darkest;
+    color: white;
+    padding: 30px;
+// si txt + fontsize : deformation, it's difficult to see the txt
+    img{
+       filter: brightness(0) invert(1);
+       width: 100px;
+    }
+
+    ul{
+        margin-top: 20px;
+        
+        li{
+            list-style-type: none;
+            padding: 5px;
+
+            a{
+                color: white;
+                text-decoration: none;
+                font-size: 1.4rem;
+
+                i{
+                    // Aligne les textes après les i
+                    height: 15px;
+                    width: 15px;
+                    margin-right: 15px;
+                }
+            }
+        }
+    }
+}

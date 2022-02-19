@@ -1,4 +1,4 @@
-header, .reservation .reservation_localisation, .reservation .reservation_header, .restaurant_card .restaurant_card_info, .restaurant_card .restaurant_card_info strong {
+header, .reservation .reservation_localisation, .reservation .reservation_header, .restaurant_card .restaurant_card_info, .restaurant_card strong {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -36,6 +36,39 @@ header {
   font-family: "Shrikhand", cursive;
   -webkit-box-shadow: 0px 2px 13px -5px rgba(0, 0, 0, 0.3);
           box-shadow: 0px 2px 13px -5px rgba(0, 0, 0, 0.3);
+}
+
+footer {
+  background-color: #353535;
+  color: white;
+  padding: 30px;
+}
+
+footer img {
+  -webkit-filter: brightness(0) invert(1);
+          filter: brightness(0) invert(1);
+  width: 100px;
+}
+
+footer ul {
+  margin-top: 20px;
+}
+
+footer ul li {
+  list-style-type: none;
+  padding: 5px;
+}
+
+footer ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.4rem;
+}
+
+footer ul li a i {
+  height: 15px;
+  width: 15px;
+  margin-right: 15px;
 }
 
 button {
@@ -226,12 +259,12 @@ button:hover::after {
 
 .restaurant_card .restaurant_card_info .restaurant_card_heart svg:hover {
   cursor: pointer;
-  -webkit-transition: opacity .8s ease-out;
-  transition: opacity .8s ease-out;
+  -webkit-transition: opacity 0.8s ease-out;
+  transition: opacity 0.8s ease-out;
   opacity: 1;
 }
 
-.restaurant_card .restaurant_card_info strong {
+.restaurant_card strong {
   position: absolute;
   top: 15px;
   right: 10px;
