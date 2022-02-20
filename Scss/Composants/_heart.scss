@@ -1,0 +1,23 @@
+.restaurant_card_heart, .heart {
+    position: relative;
+
+    i {
+        font-size: 2.4rem;
+    }
+
+    svg {
+        position: absolute;
+        width: 25px;
+        height: 25px;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        opacity: 0;
+
+        &:hover {
+            cursor: pointer;
+            transition: opacity 0.8s ease-out;
+            opacity: 1;
+        }
+    }
+}

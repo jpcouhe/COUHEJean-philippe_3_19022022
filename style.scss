@@ -1,13 +1,27 @@
 @import "./Scss/Utils/mixins";
 @import "./Scss/Utils/variables";
 @import "./Scss/Utils/placeholders";
+
+
+
 @import "./Scss/Base/breakpoints";
 @import "./Scss/Base/base";
+
+
+
 @import "./Scss/Layout/header";
 @import "./Scss/Layout/footer";
+@import "./Scss/Layout/banner";
 
 @import "./Scss/Composants/buttons";
+@import "./Scss/Composants/heart";
+
+
+
+
+
 
 @import "./Scss/Pages/index";
 @import "./Scss/Pages/index_functioning";
-@import "./Scss/Pages/index_restaurants"
+@import "./Scss/Pages/index_restaurants";
+@import "./Scss/Pages/menu";
