@@ -27,8 +27,8 @@
             font-size: 3rem;
         }
 
-        .heart{
-            margin-right:20px;
+        .heart {
+            margin-right: 20px;
         }
     }
 
@@ -78,6 +78,7 @@
     }
 }
 
+
 .menu_card_info {
     display: flex;
     align-items: center;
@@ -86,6 +87,7 @@
     background-color: #fff;
     box-shadow: 0px 5px 10px -5px rgba(0, 0, 0, 0.4);
     border-radius: 25px;
+    opacity: 0;
     font-size: 1.5rem;
 
     .menu_card_text {
@@ -114,5 +116,41 @@
     .menu_card_price {
         font-weight: 700;
         margin-left: auto;
+    }
+}
+// ----------------------- ANIMATION-----------------------------------
+.card_entrees {
+    .menu_card_info:nth-of-type(1) {
+        animation: Apparition 1000ms ease-in-out 0s both;
+    }
+    .menu_card_info:nth-of-type(2) {
+        animation: Apparition 1000ms ease-in-out 100ms both;
+    }
+    .menu_card_info:nth-of-type(3) {
+        animation: Apparition 1000ms ease-in-out 200ms both;
+    }
+}
+
+.card_plat {
+    .menu_card_info:nth-of-type(1) {
+        animation: Apparition 1000ms ease-in-out 300ms both;
+    }
+    .menu_card_info:nth-of-type(2) {
+        animation: Apparition 1000ms ease-in-out 400ms both;
+    }
+    .menu_card_info:nth-of-type(3) {
+        animation: Apparition 1000ms ease-in-out 500ms both;
+    }
+}
+
+.card_dessert {
+    .menu_card_info:nth-of-type(1) {
+        animation: Apparition 1000ms ease-in-out 600ms both;
+    }
+    .menu_card_info:nth-of-type(2) {
+        animation: Apparition 1000ms ease-in-out 700ms both;
+    }
+    .menu_card_info:nth-of-type(3) {
+        animation: Apparition 1000ms ease-in-out 800ms both;
     }
 }

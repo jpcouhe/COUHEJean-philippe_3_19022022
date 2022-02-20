@@ -52,6 +52,32 @@
   }
 }
 
+@-webkit-keyframes Apparition {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(100px);
+            transform: translateY(100px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes Apparition {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(100px);
+            transform: translateY(100px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
 *, ::after, ::before {
   margin: 0;
   padding: 0;
@@ -607,6 +633,7 @@ button:hover::after {
   -webkit-box-shadow: 0px 5px 10px -5px rgba(0, 0, 0, 0.4);
           box-shadow: 0px 5px 10px -5px rgba(0, 0, 0, 0.4);
   border-radius: 25px;
+  opacity: 0;
   font-size: 1.5rem;
 }
 
@@ -635,4 +662,49 @@ button:hover::after {
 .menu_card_info .menu_card_price {
   font-weight: 700;
   margin-left: auto;
+}
+
+.card_entrees .menu_card_info:nth-of-type(1) {
+  -webkit-animation: Apparition 1000ms ease-in-out 0s both;
+          animation: Apparition 1000ms ease-in-out 0s both;
+}
+
+.card_entrees .menu_card_info:nth-of-type(2) {
+  -webkit-animation: Apparition 1000ms ease-in-out 100ms both;
+          animation: Apparition 1000ms ease-in-out 100ms both;
+}
+
+.card_entrees .menu_card_info:nth-of-type(3) {
+  -webkit-animation: Apparition 1000ms ease-in-out 200ms both;
+          animation: Apparition 1000ms ease-in-out 200ms both;
+}
+
+.card_plat .menu_card_info:nth-of-type(1) {
+  -webkit-animation: Apparition 1000ms ease-in-out 300ms both;
+          animation: Apparition 1000ms ease-in-out 300ms both;
+}
+
+.card_plat .menu_card_info:nth-of-type(2) {
+  -webkit-animation: Apparition 1000ms ease-in-out 400ms both;
+          animation: Apparition 1000ms ease-in-out 400ms both;
+}
+
+.card_plat .menu_card_info:nth-of-type(3) {
+  -webkit-animation: Apparition 1000ms ease-in-out 500ms both;
+          animation: Apparition 1000ms ease-in-out 500ms both;
+}
+
+.card_dessert .menu_card_info:nth-of-type(1) {
+  -webkit-animation: Apparition 1000ms ease-in-out 600ms both;
+          animation: Apparition 1000ms ease-in-out 600ms both;
+}
+
+.card_dessert .menu_card_info:nth-of-type(2) {
+  -webkit-animation: Apparition 1000ms ease-in-out 700ms both;
+          animation: Apparition 1000ms ease-in-out 700ms both;
+}
+
+.card_dessert .menu_card_info:nth-of-type(3) {
+  -webkit-animation: Apparition 1000ms ease-in-out 800ms both;
+          animation: Apparition 1000ms ease-in-out 800ms both;
 }
