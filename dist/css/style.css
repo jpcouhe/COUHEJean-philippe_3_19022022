@@ -10,6 +10,48 @@
           align-items: center;
 }
 
+@-webkit-keyframes Turn {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes Turn {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes Disapear {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    z-index: -1;
+  }
+}
+
+@keyframes Disapear {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    z-index: -1;
+  }
+}
+
 *, ::after, ::before {
   margin: 0;
   padding: 0;
@@ -136,6 +178,55 @@ footer .footer_container ul li a i {
   .banner img {
     height: 400px;
   }
+}
+
+.spinner {
+  position: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 1;
+  opacity: 1;
+  -webkit-animation: Disapear 0.01s 2s 1 both;
+          animation: Disapear 0.01s 2s 1 both;
+}
+
+.spinner .loader {
+  width: 75px;
+  height: 75px;
+  border: 5px solid transparent;
+  border-top-color: #9356DC;
+  border-bottom-color: #9356DC;
+  border-radius: 100px;
+  z-index: 100;
+  -webkit-animation: 800ms linear infinite Turn;
+          animation: 800ms linear infinite Turn;
+  /* @keyframes duration | timing-function | delay |
+   iteration-count | direction | fill-mode | play-state | name */
+}
+
+.spinner .loader::after {
+  content: "";
+  display: block;
+  position: absolute;
+  border-radius: 100%;
+  border: 5px solid transparent;
+  border-left-color: #FF79DA;
+  border-right-color: #FF79DA;
+  top: 10px;
+  left: 10px;
+  right: 10px;
+  bottom: 10px;
+  opacity: 0.4;
 }
 
 button {
