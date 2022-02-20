@@ -78,10 +78,10 @@
     }
 }
 
-
 .menu_card_info {
     display: flex;
     align-items: center;
+    height: 80px;
     margin-top: 15px;
     padding: 15px 20px;
     background-color: #fff;
@@ -89,6 +89,7 @@
     border-radius: 25px;
     opacity: 0;
     font-size: 1.5rem;
+    cursor: pointer;
 
     .menu_card_text {
         min-width: 50px;
@@ -117,8 +118,37 @@
         font-weight: 700;
         margin-left: auto;
     }
+
+    .menu-checkout {
+        width: 0px;
+        height: 0px;
+        border-radius: 0 25px 25px 0;
+        background-color: #99e2d0;
+        transform: translateX(20px);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        i {
+            font-size: 2.8rem;
+
+            opacity: 0;
+            color: #fff;
+        }
+    }
+
+    &:hover .menu-checkout {
+        animation: translate 500ms linear 0s 1 both;
+    }
+
+    &:hover .menu-checkout i {
+        animation: opacity 200ms ease-in-out 200ms 1 both,
+            rotate 600ms linear 400ms 1 both;
+    }
+
 }
 // ----------------------- ANIMATION-----------------------------------
+
 .card_entrees {
     .menu_card_info:nth-of-type(1) {
         animation: Apparition 1000ms ease-in-out 0s both;

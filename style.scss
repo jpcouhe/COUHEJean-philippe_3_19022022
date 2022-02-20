@@ -1,19 +1,22 @@
+// -----------------------------------------------------------------
+// -----------------------------------------------------------------
+
 @import "./Scss/Utils/mixins";
 @import "./Scss/Utils/variables";
 @import "./Scss/Utils/placeholders";
 @import "./Scss/Utils/keyframes";
-
-
+// -----------------------------------------------------------------
+// -----------------------------------------------------------------
 @import "./Scss/Base/breakpoints";
 @import "./Scss/Base/base";
-
-
+// -----------------------------------------------------------------
+// -----------------------------------------------------------------
 
 @import "./Scss/Layout/header";
 @import "./Scss/Layout/footer";
 @import "./Scss/Layout/banner";
 @import "./Scss/Layout/spinner";
-
+// -----------------------------------------------------------------
 @import "./Scss/Composants/buttons";
 @import "./Scss/Composants/heart";
 
