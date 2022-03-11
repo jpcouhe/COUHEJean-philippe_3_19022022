@@ -4,7 +4,6 @@
     position: relative;
     top: -50px;
     padding: 20px;
-    max-width: 1440px;
     margin-bottom: -50px;
     background-color: $bgcolor_light;
     border-radius: 40px 40px 0 0;
@@ -59,8 +58,6 @@
             position: relative;
             padding: 8px 0;
             margin-top: 40px;
-            font-weight: 300;
-            font-size: 1.8rem;
 
             @include lg {
                 margin-top: 0;
@@ -70,7 +67,7 @@
                 @include pseudo-el;
                 width: 40px;
                 height: 3px;
-                background-color: #99e2d0;
+                background-color: $bgcolor_NewAndCheck;
                 bottom: 0;
                 left: 0;
             }
@@ -84,38 +81,25 @@
     height: 80px;
     margin-top: 15px;
     padding: 15px 20px;
-    background-color: #fff;
-    box-shadow: 0px 5px 10px -5px rgba(0, 0, 0, 0.4);
-    border-radius: 25px;
+    background-color: $bgcolor_card;
+    @include borderRadius();
     opacity: 0;
-    font-size: 1.5rem;
     cursor: pointer;
 
     .menu_card_text {
         min-width: 50px;
-
-        // Pour que Text-overflow fonctionne
         h3 {
             min-width: 50px;
-            font-size: 1.8rem;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            white-space: nowrap;
-            display: block;
+            @extend %ellipsis;
         }
 
         p {
-            overflow: hidden;
-            text-overflow: ellipsis;
-            white-space: nowrap;
-            display: block;
-            font-weight: 300;
+            @extend %ellipsis;
             margin-top: 5px;
         }
     }
 
     .menu_card_price {
-        font-weight: 700;
         margin-left: auto;
     }
 
@@ -123,15 +107,12 @@
         width: 0px;
         height: 0px;
         border-radius: 0 25px 25px 0;
-        background-color: #99e2d0;
+        background-color: $bgcolor_NewAndCheck;
         transform: translateX(20px);
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @extend %flex-center;
 
         i {
             font-size: 2.8rem;
-
             opacity: 0;
             color: #fff;
         }
@@ -149,41 +130,51 @@
 }
 // ----------------------- ANIMATION-----------------------------------
 
-.card_entrees {
-    .menu_card_info:nth-of-type(1) {
-        animation: Apparition 1000ms ease-in-out 0s both;
-    }
-    .menu_card_info:nth-of-type(2) {
-        animation: Apparition 1000ms ease-in-out 100ms both;
-    }
-    .menu_card_info:nth-of-type(3) {
-        animation: Apparition 1000ms ease-in-out 200ms both;
-    }
-    .menu_card_info:nth-of-type(4) {
-        animation: Apparition 1000ms ease-in-out 300ms both;
-    }
-}
 
-.card_plat {
-    .menu_card_info:nth-of-type(1) {
-        animation: Apparition 1000ms ease-in-out 300ms both;
-    }
-    .menu_card_info:nth-of-type(2) {
-        animation: Apparition 1000ms ease-in-out 400ms both;
-    }
-    .menu_card_info:nth-of-type(3) {
-        animation: Apparition 1000ms ease-in-out 500ms both;
-    }
-}
 
-.card_dessert {
-    .menu_card_info:nth-of-type(1) {
-        animation: Apparition 1000ms ease-in-out 600ms both;
-    }
-    .menu_card_info:nth-of-type(2) {
-        animation: Apparition 1000ms ease-in-out 700ms both;
-    }
-    .menu_card_info:nth-of-type(3) {
-        animation: Apparition 1000ms ease-in-out 800ms both;
-    }
+// .card_entrees {
+//     .menu_card_info:nth-of-type(1) {
+//         animation: Apparition 1000ms ease-in-out 0s both;
+//     }
+//     .menu_card_info:nth-of-type(2) {
+//         animation: Apparition 1000ms ease-in-out 100ms both;
+//     }
+//     .menu_card_info:nth-of-type(3) {
+//         animation: Apparition 1000ms ease-in-out 200ms both;
+//     }
+//     .menu_card_info:nth-of-type(4) {
+//         animation: Apparition 1000ms ease-in-out 300ms both;
+//     }
+// }
+
+// .card_plat {
+//     .menu_card_info:nth-of-type(1) {
+//         animation: Apparition 1000ms ease-in-out 300ms both;
+//     }
+//     .menu_card_info:nth-of-type(2) {
+//         animation: Apparition 1000ms ease-in-out 400ms both;
+//     }
+//     .menu_card_info:nth-of-type(3) {
+//         animation: Apparition 1000ms ease-in-out 500ms both;
+//     }
+// }
+
+// .card_dessert {
+//     .menu_card_info:nth-of-type(1) {
+//         animation: Apparition 1000ms ease-in-out 600ms both;
+//     }
+//     .menu_card_info:nth-of-type(2) {
+//         animation: Apparition 1000ms ease-in-out 700ms both;
+//     }
+//     .menu_card_info:nth-of-type(3) {
+//         animation: Apparition 1000ms ease-in-out 800ms both;
+//     }
+// }
+
+
+.menu_card_info{
+    animation-name: Apparition;
+    animation-duration: 1000ms;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: both;
 }

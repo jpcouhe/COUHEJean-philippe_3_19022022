@@ -1,8 +1,6 @@
 .spinner {
     position: fixed;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @extend %flex-center;
     height: 100vh;
     width: 100vw;
     background-color: rgba($color: #000000, $alpha: 0.3);
@@ -11,30 +9,21 @@
     animation: Disapear 0.01s 2s 1 both;
 
     .loader {
-        
-        width: 75px;
-        height: 75px;
+        @include center-logo(75px, 75px, 75px);
         border: 5px solid transparent;
         border-top-color: $primary;
         border-bottom-color: $primary;
-        border-radius: 100px;
+        @include borderRadius(100px ,100px ,100px ,100px);
         z-index: 100;
         animation:  800ms linear infinite Turn; 
 
-        /* @keyframes duration | timing-function | delay |
-   iteration-count | direction | fill-mode | play-state | name */
-  
-
         &::after {
             @include pseudo-el;
+            @include absolute-el(10px, 10px, 10px, 10px, auto, auto);
             border-radius: 100%;
             border: 5px solid transparent;
             border-left-color: $secondary;
             border-right-color: $secondary;
-            top: 10px;
-            left: 10px;
-            right: 10px;
-            bottom: 10px;
             opacity: 0.4;
             
         }

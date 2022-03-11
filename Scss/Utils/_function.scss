@@ -1,0 +1,9 @@
+@for $i from 1 through 12 {
+    .item#{$i}{
+        animation-delay: 0ms + $i * 100;
+    }
+
+    // .menu_card_info:nth-of-type(#{$i}){
+    //     animation-delay: 0ms + $i * 100;
+    // }
+}

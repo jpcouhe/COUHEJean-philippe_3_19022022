@@ -1,9 +1,7 @@
 .functioning {
     padding: 50px 20px;
-    max-width: 1440px;
     margin: 0 auto;
     .functioning_container {
-
         @include sm {
             display: flex;
             justify-content: space-around;
@@ -15,44 +13,33 @@
             flex-wrap: wrap;
             margin: 20px 0;
             padding: 30px;
-            font-size: 1.5rem;
             font-weight: 600;
             background-color: $bgcolor_light;
-            border-radius: 25px;
-            box-shadow: 0px 5px 10px -5px rgba(0, 0, 0, 0.4);
+            @include borderRadius();
             position: relative;
             cursor: pointer;
 
-            @include sm{
-                width: 350px;  
+            @include sm {
+                width: 350px;
             }
 
             i {
                 margin-right: 20px;
-                font-size: 1.8rem;
                 color: rgba(0, 0, 0, 0.5);
             }
 
             &::before {
                 content: attr(data-count);
-                position: absolute;
-                top: 50%;
-                left: -12px;
-                transform: translate(0, -50%);
-                width: 25px;
-                height: 25px;
+                @include absolute-el(50%, 0, 0, -12px, 0, -50%);
+                @include center-logo(25px, 25px, 25px);
                 text-align: center;
-                line-height: 25px;
-                color: white;
+                color: $buttoncolor;
                 background-color: $primary;
-                border-radius: 50%;
+                @include borderRadius(50%,50%,50%,50%);
             }
-
-            // left -12px Circle Rayon
-            // translate for center the circle in the middle of the functioning_box
-
+       
             &:hover {
-                background-color: #f5edff;
+                background-color: $bgcolor-functionning;
 
                 i {
                     color: $primary;

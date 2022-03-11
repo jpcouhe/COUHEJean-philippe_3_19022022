@@ -1,11 +1,10 @@
 footer{
     background-color: $bgcolor_darkest;
-    color: white;
+    color: $footerlink;
     padding: 30px;
 
 // si txt + fontsize : deformation, difficile de voir le texte
     .footer_container{
-        max-width: 1440px;
         margin: 0 auto;
 
         img{
@@ -17,18 +16,13 @@ footer{
              margin-top: 20px;
              
              li{
-                 list-style-type: none;
                  padding: 5px;
      
-                 a{
-                     color: white;
-                     text-decoration: none;
+                 a{      
                      font-size: 1.4rem;
      
                      i{
-                         // Aligne les textes après les i
-                         height: 15px;
-                         width: 15px;
+                        @include center-logo (15px, 15px, auto);
                          margin-right: 15px;
                      }
                  }

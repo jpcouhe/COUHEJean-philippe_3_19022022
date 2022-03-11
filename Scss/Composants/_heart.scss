@@ -6,12 +6,10 @@
     }
 
     svg {
-        position: absolute;
+        @include absolute-el(50%, auto, auto, 50%, -50%, -50%);
+        
         width: 25px;
         height: 25px;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
         opacity: 0;
 
         &:hover {
@@ -21,3 +19,4 @@
         }
     }
 }
+
