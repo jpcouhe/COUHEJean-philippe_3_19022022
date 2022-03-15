@@ -1,33 +1,31 @@
-footer{
+footer {
     background-color: $bgcolor_darkest;
     color: $footerlink;
     padding: 30px;
 
-// si txt + fontsize : deformation, difficile de voir le texte
-    .footer_container{
+    // si txt + fontsize : deformation, difficile de voir le texte
+    .footer_container {
         margin: 0 auto;
 
-        img{
+        img {
             filter: brightness(0) invert(1);
-            width: 100px;
-         }
-     
-         ul{
-             margin-top: 20px;
-             
-             li{
-                 padding: 5px;
-     
-                 a{      
-                     font-size: 1.4rem;
-     
-                     i{
-                        @include center-logo (15px, 15px, auto);
-                         margin-right: 15px;
-                     }
-                 }
-             }
-         }
+        }
+
+        ul {
+            margin-top: 20px;
+
+            li {
+                padding: 5px;
+
+                a {
+                    font-size: 1.4rem;
+
+                    i {
+                        @include center-logo(15px, 15px, auto);
+                        margin-right: 15px;
+                    }
+                }
+            }
+        }
     }
-    
 }

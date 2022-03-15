@@ -6,6 +6,8 @@ $breakpoints: (
     "xl": 1200px,
 );
 
+// Comme Tableau et methode map Javascript
+
 @mixin xs {
     @media (min-width: map-get($breakpoints, "xs")) {
         @content;

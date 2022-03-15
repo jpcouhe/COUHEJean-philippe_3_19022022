@@ -32,7 +32,6 @@
 
         img {
             height: 100%;
-            width: 100%;
             object-fit: cover;
             @include borderRadius(25px, 25px, 0, 0);
         }
@@ -59,7 +58,7 @@
         @extend %flex-center;
         color: $buttonNew;
         background: $bgcolor_NewAndCheck;
-        @include borderRadius (5px, 5px, 5px, 5px);
+        @include borderRadius(5px, 5px, 5px, 5px);
         @include absolute-el(15px, 20px, 0, auto, 0, 0);
     }
 }
