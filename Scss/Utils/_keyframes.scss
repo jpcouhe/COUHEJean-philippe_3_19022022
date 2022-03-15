@@ -1,11 +1,11 @@
 // ------------------ANIMATION DU SPINNER --------------------------
 // -----------------------------------------------------------------
 @keyframes Turn {
-    0%{
+    0% {
         transform: rotate(0deg);
     }
 
-    100%{
+    100% {
         transform: rotate(360deg);
     }
 }
@@ -14,23 +14,23 @@
 // -----------------------------------------------------------------
 @keyframes Disapear {
     0% {
-      opacity: 1;
+        opacity: 1;
     }
     100% {
-      opacity: 0;
-      z-index: -1;
+        opacity: 0;
+        z-index: -1;
     }
-  }
+}
 
 // -----------ANIMATION MENU APPARITION PROGRESSIVE ----------------
 // -----------------------------------------------------------------
-@keyframes Apparition{
-    0%{
+@keyframes Apparition {
+    0% {
         opacity: 0;
         transform: translateY(100px);
     }
 
-    100%{
+    100% {
         opacity: 1;
         transform: translateY(0);
     }
@@ -38,41 +38,40 @@
 
 // -----------------ANIMATION MENU CHECKOUT---------------------------------
 // --------------------Grossissement------------------------
-@keyframes translateCheckout {
-    from {
-      width: 0;
-      height: 0;
-      
-    }
-    to {
-      width: 80px;
-      height: 80px;
-     
-    }
+
+@keyframes slide-left {
+  0% {
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
   }
+  100% {
+    -webkit-transform: scaleX(50px);
+            transform: scaleX(50px);
+  }
+}
 // ------------------Apparition progressive---------------------------
 
 @keyframes opacityCheckout {
     0% {
-      opacity: 0;
+        opacity: 0;
     }
-  
+
     100% {
-      opacity: 1;
+        opacity: 1;
     }
-  }
-  
+}
+
 //   --------------Icone qui semble arriver-------------------------
 @keyframes rotate {
     0% {
-      transform: rotate(0);
+        transform: rotate(0);
     }
-  
+
     75% {
-      transform: rotate(45deg);
+        transform: rotate(45deg);
     }
-  
+
     10% {
-      transform: rotate(-45deg);
+        transform: rotate(-45deg);
     }
-  }
+}

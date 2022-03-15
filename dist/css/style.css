@@ -58,7 +58,7 @@
           animation-delay: 1200ms;
 }
 
-.spinner, .reservation .reservation_localisation, .reservation .reservation_header, .restaurant_card .restaurant_card_info, .restaurant_card strong, .menu .menu-header, .menu_card_info .menu-checkout {
+.spinner, .reservation .reservation_localisation, .reservation .reservation_header, .restaurant_card .restaurant_card_info, .restaurant_card strong, .menu .menu-header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -145,25 +145,25 @@
   }
 }
 
-@-webkit-keyframes translateCheckout {
-  from {
-    width: 0;
-    height: 0;
+@-webkit-keyframes slide-left {
+  0% {
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
   }
-  to {
-    width: 80px;
-    height: 80px;
+  100% {
+    -webkit-transform: scaleX(50px);
+    transform: scaleX(50px);
   }
 }
 
-@keyframes translateCheckout {
-  from {
-    width: 0;
-    height: 0;
+@keyframes slide-left {
+  0% {
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
   }
-  to {
-    width: 80px;
-    height: 80px;
+  100% {
+    -webkit-transform: scaleX(50px);
+    transform: scaleX(50px);
   }
 }
 
@@ -771,12 +771,13 @@ button:hover::after {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-negative: 1;
+      flex-shrink: 1;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   height: 80px;
   margin-top: 15px;
-  padding: 15px 20px;
   background-color: #fff;
   border-radius: 25px 25px 25px 25px;
   opacity: 0;
@@ -789,23 +790,29 @@ button:hover::after {
 
 .menu_card_info .menu_card_text h3 {
   min-width: 50px;
+  margin-left: 20px;
 }
 
 .menu_card_info .menu_card_text p {
   margin-top: 5px;
+  margin-left: 20px;
 }
 
 .menu_card_info .menu_card_price {
+  -ms-flex-negative: 1;
+      flex-shrink: 1;
   margin-left: auto;
+  margin-right: 20px;
 }
 
 .menu_card_info .menu-checkout {
-  width: 0px;
-  height: 0px;
+  display: none;
+  position: absolute;
+  right: 0;
+  width: 80px;
+  height: 100%;
   border-radius: 0 25px 25px 0;
   background-color: #99e2d0;
-  -webkit-transform: translateX(20px);
-          transform: translateX(20px);
 }
 
 .menu_card_info .menu-checkout i {
@@ -815,8 +822,22 @@ button:hover::after {
 }
 
 .menu_card_info:hover .menu-checkout {
-  -webkit-animation: translateCheckout 500ms linear 0s 1 both;
-          animation: translateCheckout 500ms linear 0s 1 both;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  position: relative;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transform-origin: right;
+          transform-origin: right;
+  -webkit-animation: slide-left 300ms ease;
+          animation: slide-left 300ms ease;
 }
 
 .menu_card_info:hover .menu-checkout i {
