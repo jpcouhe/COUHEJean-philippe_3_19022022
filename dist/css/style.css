@@ -58,7 +58,7 @@
           animation-delay: 1200ms;
 }
 
-.spinner, .reservation .reservation_localisation, .reservation .reservation_header, .restaurant_card .restaurant_card_info, .restaurant_card strong, .menu .menu-header {
+.spinner, .reservation .reservation_localisation, .reservation .reservation_header, .restaurant_article strong, .restaurant_card .restaurant_card_info, .menu .menu-header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -148,22 +148,22 @@
 @-webkit-keyframes slide-left {
   0% {
     -webkit-transform: scaleX(0);
-    transform: scaleX(0);
+            transform: scaleX(0);
   }
   100% {
     -webkit-transform: scaleX(50px);
-    transform: scaleX(50px);
+            transform: scaleX(50px);
   }
 }
 
 @keyframes slide-left {
   0% {
     -webkit-transform: scaleX(0);
-    transform: scaleX(0);
+            transform: scaleX(0);
   }
   100% {
     -webkit-transform: scaleX(50px);
-    transform: scaleX(50px);
+            transform: scaleX(50px);
   }
 }
 
@@ -451,15 +451,20 @@ button:hover::after {
   opacity: 0.7;
 }
 
-.restaurant_card_heart, .heart {
-  position: relative;
+.restaurant_card_heart,
+.heart {
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
 }
 
-.restaurant_card_heart i, .heart i {
+.restaurant_card_heart i,
+.heart i {
   font-size: 2.4rem;
 }
 
-.restaurant_card_heart svg, .heart svg {
+.restaurant_card_heart svg,
+.heart svg {
   position: absolute;
   top: 50%;
   right: auto;
@@ -472,7 +477,8 @@ button:hover::after {
   opacity: 0;
 }
 
-.restaurant_card_heart svg:hover, .heart svg:hover {
+.restaurant_card_heart svg:hover,
+.heart svg:hover {
   cursor: pointer;
   -webkit-transition: opacity 0.8s ease-out;
   transition: opacity 0.8s ease-out;
@@ -602,10 +608,29 @@ button:hover::after {
   }
 }
 
-.restaurant_card {
-  margin: 20px 0;
-  border-radius: 25px 25px 25px 25px;
+.restaurant_article {
   position: relative;
+  margin: 20px 0;
+}
+
+.restaurant_article strong {
+  font-size: 1.8rem;
+  height: 40px;
+  width: 100px;
+  color: #008766;
+  background: #99e2d0;
+  border-radius: 5px 5px 5px 5px;
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  bottom: 0;
+  left: auto;
+  -webkit-transform: translate(0, 0);
+          transform: translate(0, 0);
+}
+
+.restaurant_card {
+  border-radius: 25px 25px 25px 25px;
 }
 
 @media (min-width: 720px) {
@@ -645,21 +670,6 @@ button:hover::after {
 .restaurant_card .restaurant_card_info .restaurant_card_text h3 {
   font-size: 1.7rem;
   margin-bottom: 5px;
-}
-
-.restaurant_card strong {
-  height: 30px;
-  width: 80px;
-  color: #008766;
-  background: #99e2d0;
-  border-radius: 5px 5px 5px 5px;
-  position: absolute;
-  top: 15px;
-  right: 20px;
-  bottom: 0;
-  left: auto;
-  -webkit-transform: translate(0, 0);
-          transform: translate(0, 0);
 }
 
 .menu {
