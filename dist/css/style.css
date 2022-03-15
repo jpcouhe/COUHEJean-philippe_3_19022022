@@ -326,6 +326,7 @@ footer .footer_container {
 footer .footer_container img {
   -webkit-filter: brightness(0) invert(1);
           filter: brightness(0) invert(1);
+  width: 120px;
 }
 
 footer .footer_container ul {
