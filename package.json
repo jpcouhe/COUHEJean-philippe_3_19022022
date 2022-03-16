@@ -1,0 +1,22 @@
+{
+  "name": "p3_couhe_jean-philippe",
+  "version": "1.0.0",
+  "description": "Projet en SASS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jpcouhe/COUHEJean-philippe_3_19022022.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jpcouhe/COUHEJean-philippe_3_19022022/issues"
+  },
+  "homepage": "https://github.com/jpcouhe/COUHEJean-philippe_3_19022022#readme",
+  "dependencies": {
+    "sass": "^1.49.9"
+  }
+}
