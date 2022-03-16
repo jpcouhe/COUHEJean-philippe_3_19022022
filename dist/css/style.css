@@ -186,32 +186,24 @@
 }
 
 @-webkit-keyframes rotate {
-  0% {
+  20% {
     -webkit-transform: rotate(0);
             transform: rotate(0);
   }
-  75% {
-    -webkit-transform: rotate(45deg);
-            transform: rotate(45deg);
-  }
-  10% {
-    -webkit-transform: rotate(-45deg);
-            transform: rotate(-45deg);
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
   }
 }
 
 @keyframes rotate {
-  0% {
+  20% {
     -webkit-transform: rotate(0);
             transform: rotate(0);
   }
-  75% {
-    -webkit-transform: rotate(45deg);
-            transform: rotate(45deg);
-  }
-  10% {
-    -webkit-transform: rotate(-45deg);
-            transform: rotate(-45deg);
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
   }
 }
 
@@ -829,7 +821,6 @@ button:hover::after {
 
 .menu_card_info .menu-checkout i {
   font-size: 2.8rem;
-  opacity: 0;
   color: #fff;
 }
 
@@ -853,8 +844,8 @@ button:hover::after {
 }
 
 .menu_card_info:hover .menu-checkout i {
-  -webkit-animation: opacityCheckout 200ms ease-in-out 200ms 1 both, rotate 600ms linear 400ms 1 both;
-          animation: opacityCheckout 200ms ease-in-out 200ms 1 both, rotate 600ms linear 400ms 1 both;
+  -webkit-animation: rotate 450ms linear 10ms 1 forwards;
+          animation: rotate 450ms linear 10ms 1 forwards;
 }
 
 .menu_card_info {
