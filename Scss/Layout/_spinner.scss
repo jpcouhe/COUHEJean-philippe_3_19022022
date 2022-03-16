@@ -1,3 +1,5 @@
+@use '../Utils/' as *;
+
 .spinner {
     position: fixed;
     @extend %flex-center;

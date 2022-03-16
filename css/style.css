@@ -1,0 +1,292 @@
+.item1 {
+  animation-delay: 100ms;
+}
+
+.item2 {
+  animation-delay: 200ms;
+}
+
+.item3 {
+  animation-delay: 300ms;
+}
+
+.item4 {
+  animation-delay: 400ms;
+}
+
+.item5 {
+  animation-delay: 500ms;
+}
+
+.item6 {
+  animation-delay: 600ms;
+}
+
+.item7 {
+  animation-delay: 700ms;
+}
+
+.item8 {
+  animation-delay: 800ms;
+}
+
+.item9 {
+  animation-delay: 900ms;
+}
+
+.item10 {
+  animation-delay: 1000ms;
+}
+
+.item11 {
+  animation-delay: 1100ms;
+}
+
+.item12 {
+  animation-delay: 1200ms;
+}
+
+@keyframes Turn {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes Disapear {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    z-index: -1;
+  }
+}
+@keyframes Apparition {
+  0% {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes slide-left {
+  0% {
+    transform: scaleX(0);
+  }
+  100% {
+    transform: scaleX(50px);
+  }
+}
+@keyframes opacityCheckout {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes rotate {
+  20% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+*, ::after, ::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+h1 {
+  font-size: 2.4rem;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 2.4rem;
+  font-weight: 700;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+li {
+  list-style-type: none;
+}
+
+.wd-100 {
+  width: 100%;
+}
+
+.box__shadow {
+  box-shadow: 0px 5px 10px -5px rgba(0, 0, 0, 0.4);
+}
+
+.max-width1440 {
+  max-width: 1440px;
+}
+
+.fw300 {
+  font-weight: 300;
+}
+
+.fw700 {
+  font-weight: 700;
+}
+
+.fs1-5rem {
+  font-size: 1.5rem;
+}
+
+.fs1-8rem {
+  font-size: 1.8rem;
+}
+
+header {
+  height: 65px;
+  padding: 0 20px;
+  box-shadow: 0px 2px 13px -5px rgba(0, 0, 0, 0.3);
+}
+header .header_container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+header .header_container img {
+  width: 170px;
+  margin: 0 auto;
+}
+header .header_container .arrow_header {
+  font-size: 2.4rem;
+  position: absolute;
+  top: 25%;
+  left: 0%;
+  transform: translate(0%, 25%);
+  color: #353535;
+}
+
+button {
+  position: relative;
+  width: 190px;
+  font-size: 1.4rem;
+  padding: 15px;
+  color: #FFF;
+  background: linear-gradient(170deg, #FF79DA, #9356DC);
+  outline: none;
+  border: none;
+  border-radius: 25px 25px 25px 25px;
+  cursor: pointer;
+}
+button::after {
+  content: "";
+  display: block;
+  position: absolute;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transform: translate(0, 0);
+  background-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  border-radius: 25px 25px 25px 25px;
+  transition: opacity 250ms;
+}
+button:hover::after {
+  opacity: 0.7;
+}
+
+.heart {
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+}
+.heart i {
+  font-size: 2.4rem;
+}
+.heart svg {
+  position: absolute;
+  top: 50%;
+  right: auto;
+  bottom: auto;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 25px;
+  height: 25px;
+  opacity: 0;
+}
+.heart svg:hover {
+  cursor: pointer;
+  transition: opacity 0.8s ease-out;
+  opacity: 1;
+}
+
+.banner img {
+  height: 270px;
+  object-fit: cover;
+}
+@media (min-width: 720px) {
+  .banner img {
+    height: 300px;
+  }
+}
+@media (min-width: 960px) {
+  .banner img {
+    height: 350px;
+  }
+}
+@media (min-width: 1200px) {
+  .banner img {
+    height: 400px;
+  }
+}
+
+footer {
+  background-color: #353535;
+  color: #FFF;
+  padding: 30px;
+}
+footer .footer_container {
+  margin: 0 auto;
+}
+footer .footer_container img {
+  filter: brightness(0) invert(1);
+  width: 120px;
+}
+footer .footer_container ul {
+  margin-top: 20px;
+}
+footer .footer_container ul li {
+  padding: 5px;
+}
+footer .footer_container ul li a {
+  font-size: 1.4rem;
+}
+footer .footer_container ul li a i {
+  width: 15px;
+  height: 15px;
+  line-height: auto;
+  margin-right: 15px;
+}
+
+/*# sourceMappingURL=style.css.map */

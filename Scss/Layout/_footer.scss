@@ -1,3 +1,6 @@
+@use '../Utils/' as *;
+
+
 footer {
     background-color: $bgcolor_darkest;
     color: $footerlink;

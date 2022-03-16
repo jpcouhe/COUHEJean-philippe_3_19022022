@@ -1,0 +1,248 @@
+.item1 {
+  animation-delay: 100ms;
+}
+
+.item2 {
+  animation-delay: 200ms;
+}
+
+.item3 {
+  animation-delay: 300ms;
+}
+
+.item4 {
+  animation-delay: 400ms;
+}
+
+.item5 {
+  animation-delay: 500ms;
+}
+
+.item6 {
+  animation-delay: 600ms;
+}
+
+.item7 {
+  animation-delay: 700ms;
+}
+
+.item8 {
+  animation-delay: 800ms;
+}
+
+.item9 {
+  animation-delay: 900ms;
+}
+
+.item10 {
+  animation-delay: 1000ms;
+}
+
+.item11 {
+  animation-delay: 1100ms;
+}
+
+.item12 {
+  animation-delay: 1200ms;
+}
+
+@keyframes Turn {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes Disapear {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    z-index: -1;
+  }
+}
+@keyframes Apparition {
+  0% {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes slide-left {
+  0% {
+    transform: scaleX(0);
+  }
+  100% {
+    transform: scaleX(50px);
+  }
+}
+@keyframes opacityCheckout {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes rotate {
+  20% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.menu .menu-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu-card__text h3, .menu-card__text p {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display: block;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  top: -50px;
+  padding: 20px;
+  margin-bottom: -50px;
+  background-color: #f6f6f6;
+  border-radius: 40px 40px 0 0;
+}
+@media (min-width: 480px) {
+  .menu {
+    border-radius: 40px;
+    margin: 0 50px;
+  }
+}
+@media (min-width: 1440px) {
+  .menu {
+    margin: 0 auto 50px;
+  }
+}
+.menu .menu-header {
+  justify-content: space-between;
+  height: 80px;
+  border-radius: 25px;
+}
+.menu .menu-header h1 {
+  font-family: "Shrikhand", cursive;
+  font-size: 3rem;
+}
+.menu .menu-header .menu__heart {
+  position: relative;
+  align-self: flex-end;
+}
+.menu button {
+  margin: 50px auto;
+}
+
+@media (min-width: 960px) {
+  .menu-information {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+.menu-information__name {
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 960px) {
+  .menu-information__name {
+    width: 32%;
+  }
+}
+.menu-information__name:first-of-type h2 {
+  margin-top: 0;
+}
+.menu-information__name h2 {
+  text-transform: uppercase;
+  position: relative;
+  padding: 8px 0;
+  margin-top: 40px;
+}
+@media (min-width: 960px) {
+  .menu-information__name h2 {
+    margin-top: 0;
+  }
+}
+.menu-information__name h2::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 40px;
+  height: 3px;
+  background-color: #99e2d0;
+  bottom: 0;
+  left: 0;
+}
+
+.menu-card {
+  display: flex;
+  flex-shrink: 1;
+  align-items: center;
+  height: 80px;
+  margin-top: 15px;
+  background-color: #fff;
+  border-radius: 25px 25px 25px 25px;
+  opacity: 0;
+  cursor: pointer;
+  animation-name: Apparition;
+  animation-duration: 1000ms;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: both;
+}
+.menu-card__text {
+  min-width: 50px;
+}
+.menu-card__text h3 {
+  min-width: 50px;
+  margin-left: 20px;
+}
+.menu-card__text p {
+  margin-top: 5px;
+  margin-left: 20px;
+}
+.menu-card__price {
+  flex-shrink: 1;
+  margin-left: auto;
+  margin-right: 20px;
+}
+.menu-card__checkout {
+  display: none;
+  position: absolute;
+  right: 0;
+  width: 80px;
+  height: 100%;
+  border-radius: 0 25px 25px 0;
+  background-color: #99e2d0;
+}
+.menu-card__checkout i {
+  font-size: 2.8rem;
+  color: #fff;
+}
+.menu-card:hover .menu-card__checkout {
+  display: flex;
+  flex-shrink: 0;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  transform-origin: right;
+  animation: slide-left 300ms ease;
+}
+.menu-card:hover .menu-card__checkout i {
+  animation: rotate 450ms linear 10ms 1 forwards;
+}
+
+/*# sourceMappingURL=styleMenu.css.map */

@@ -1,0 +1,244 @@
+@keyframes Turn {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes Disapear {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    z-index: -1;
+  }
+}
+@keyframes Apparition {
+  0% {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes slide-left {
+  0% {
+    transform: scaleX(0);
+  }
+  100% {
+    transform: scaleX(50px);
+  }
+}
+@keyframes opacityCheckout {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes rotate {
+  20% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.restaurant-article strong, .restaurant-card__info, .reservation__localisation, .reservation__header, .spinner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.spinner {
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 1;
+  opacity: 1;
+  animation: Disapear 0.01s 2s 1 both;
+}
+.spinner .loader {
+  width: 75px;
+  height: 75px;
+  line-height: 75px;
+  border: 5px solid transparent;
+  border-top-color: #9356DC;
+  border-bottom-color: #9356DC;
+  border-radius: 100px 100px 100px 100px;
+  z-index: 100;
+  animation: 800ms linear infinite Turn;
+}
+.spinner .loader::after {
+  content: "";
+  display: block;
+  position: absolute;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  bottom: 10px;
+  left: 10px;
+  transform: translate(auto, auto);
+  border-radius: 100%;
+  border: 5px solid transparent;
+  border-left-color: #FF79DA;
+  border-right-color: #FF79DA;
+  opacity: 0.4;
+}
+
+.reservation__localisation {
+  font-weight: 600;
+  height: 50px;
+  background-color: #eaeaea;
+}
+.reservation__localisation i {
+  margin-right: 20px;
+}
+.reservation__header {
+  padding: 45px 30px;
+  background-color: #f6f6f6;
+  flex-direction: column;
+}
+.reservation__header h2 {
+  margin-bottom: 25px;
+  text-align: center;
+}
+.reservation__header p {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.functioning {
+  padding: 50px 20px;
+  margin: 0 auto;
+}
+@media (min-width: 480px) {
+  .functioning .functioning-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+}
+.functioning .functioning-container__box {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 20px 0;
+  padding: 30px 0px 30px 20px;
+  font-weight: 600;
+  background-color: #f6f6f6;
+  border-radius: 25px 25px 25px 25px;
+  position: relative;
+  cursor: pointer;
+}
+@media (min-width: 480px) {
+  .functioning .functioning-container__box {
+    width: 350px;
+    padding: 30px;
+  }
+}
+.functioning .functioning-container__box i {
+  margin-right: 10px;
+  color: rgba(0, 0, 0, 0.5);
+}
+@media (min-width: 480px) {
+  .functioning .functioning-container__box i {
+    margin-right: 20px;
+  }
+}
+.functioning .functioning-container__box::before {
+  content: attr(data-count);
+  position: absolute;
+  top: 50%;
+  right: 0;
+  bottom: 0;
+  left: -12px;
+  transform: translate(0, -50%);
+  width: 25px;
+  height: 25px;
+  line-height: 25px;
+  text-align: center;
+  color: #FFF;
+  background-color: #9356DC;
+  border-radius: 50% 50% 50% 50%;
+}
+.functioning .functioning-container__box:hover {
+  background-color: #f5edff;
+}
+.functioning .functioning-container__box:hover i {
+  color: #9356DC;
+}
+
+.restaurant {
+  padding: 0 20px;
+  margin: 0 auto;
+}
+@media (min-width: 720px) {
+  .restaurant .restaurant__container {
+    display: grid;
+    column-gap: 40px;
+    row-gap: 20px;
+    grid-template-columns: repeat(2, 1fr);
+    margin-bottom: 30px;
+  }
+}
+
+.restaurant-article {
+  position: relative;
+  margin: 20px 0;
+}
+.restaurant-article strong {
+  font-size: 1.8rem;
+  height: 40px;
+  width: 100px;
+  color: #008766;
+  background: #99e2d0;
+  border-radius: 5px 5px 5px 5px;
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  bottom: 0;
+  left: auto;
+  transform: translate(0, 0);
+}
+
+.restaurant-card {
+  border-radius: 25px 25px 25px 25px;
+}
+@media (min-width: 720px) {
+  .restaurant-card {
+    margin-bottom: 0;
+  }
+}
+.restaurant-card__img {
+  height: 180px;
+  width: auto;
+}
+@media (min-width: 1200px) {
+  .restaurant-card__img {
+    height: 250px;
+  }
+}
+.restaurant-card__img img {
+  height: 100%;
+  object-fit: cover;
+  border-radius: 25px 25px 0 0;
+}
+.restaurant-card__info {
+  justify-content: space-between;
+  height: 80px;
+  padding: 20px;
+  background-color: white;
+  border-radius: 0 0 25px 25px;
+}
+.restaurant-card__info__name h3 {
+  font-size: 1.7rem;
+  margin-bottom: 5px;
+}
+
+/*# sourceMappingURL=styleIndex.css.map */

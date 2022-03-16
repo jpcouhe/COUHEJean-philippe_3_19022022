@@ -1,3 +1,5 @@
+@use '../Utils/' as *;
+
 .reservation {
     &__localisation {
         font-weight: 600;
