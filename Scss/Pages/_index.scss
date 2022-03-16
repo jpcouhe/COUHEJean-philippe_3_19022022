@@ -1,5 +1,5 @@
 .reservation {
-    .reservation_localisation {
+    &__localisation {
         font-weight: 600;
         height: 50px;
         background-color: $bgcolor_dark;
@@ -10,7 +10,7 @@
         }
     }
 
-    .reservation_header {
+    &__header {
         padding: 45px 30px;
         background-color: $bgcolor_light;
         @extend %flex-center;

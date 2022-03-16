@@ -1,14 +1,14 @@
 .functioning {
     padding: 50px 20px;
     margin: 0 auto;
-    .functioning_container {
+    .functioning-container {
         @include sm {
             display: flex;
             justify-content: space-around;
             flex-wrap: wrap;
         }
 
-        .functioning_box {
+        &__box {
             display: flex;
             flex-wrap: wrap;
             margin: 20px 0;

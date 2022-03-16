@@ -2,7 +2,7 @@
     padding: 0 20px;
     margin: 0 auto;
 
-    .restaurant_container {
+    .restaurant__container {
         @include md {
             display: grid;
             column-gap: 40px;
@@ -14,7 +14,7 @@
 }
 
 
-.restaurant_article{
+.restaurant-article{
     position: relative;
     margin: 20px 0;
     
@@ -29,14 +29,10 @@
         @include absolute-el(10px, 20px, 0, auto, 0, 0);
         
         
-        // @include sm  {
-        //     top: 20px;
-        // }
-        
     }
 }
 
-.restaurant_card {
+.restaurant-card {
     @include borderRadius();
 
 
@@ -44,7 +40,7 @@
         margin-bottom: 0;
     }
 
-    .restaurant_card_img {
+    &__img {
         height: 180px;
         width: auto;
 
@@ -59,7 +55,7 @@
         }
     }
 
-    .restaurant_card_info {
+    &__info {
         @extend %flex-center;
         justify-content: space-between;
         height: 80px;
@@ -67,7 +63,7 @@
         background-color: white;
         @include borderRadius(0, 0);
 
-        .restaurant_card_text {
+        &__name {
             h3 {
                 font-size: 1.7rem;
                 margin-bottom: 5px;
