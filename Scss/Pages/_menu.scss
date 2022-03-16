@@ -1,4 +1,4 @@
-@use '../Utils/' as *;
+@use "../Utils/" as *;
 
 .menu {
     display: flex;
@@ -25,12 +25,20 @@
 
         h1 {
             font-family: "Shrikhand", cursive;
-            font-size: 3rem;
+            font-size: 2.5rem;
+            
+            @include sm {
+                font-size: 3rem;
+            }
         }
 
-        .menu__heart{
+
+        .menu__heart {
+            display: block;
             position: relative;
-            align-self:flex-end;
+            bottom: 0;
+            right: 0;
+            margin-right: 20px;     
         }
     }
 
@@ -122,14 +130,14 @@
         height: 100%;
         border-radius: 0 25px 25px 0;
         background-color: $bgcolor_NewAndCheck;
-        
+
         i {
             font-size: 2.8rem;
             // opacity: 0;
             color: #fff;
         }
     }
-    
+
     &:hover &__checkout {
         // flex Shrink pour ne pas qu'il se rappetisse
         display: flex;
@@ -138,12 +146,10 @@
         justify-content: center;
         align-items: center;
         transform-origin: right;
-        animation: slide-left 300ms ease
+        animation: slide-left 300ms ease;
     }
 
     &:hover &__checkout i {
-        animation: 
-            rotate 450ms linear 10ms 1 forwards;
+        animation: rotate 450ms linear 10ms 1 forwards;
     }
-
 }
