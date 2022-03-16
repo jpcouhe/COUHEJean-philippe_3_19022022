@@ -70,7 +70,7 @@
           align-items: center;
 }
 
-.menu_card_info .menu_card_text h3, .menu_card_info .menu_card_text p {
+.menu-card__text h3, .menu-card__text p {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -713,7 +713,7 @@ button:hover::after {
 }
 
 @media (min-width: 960px) {
-  .menu_information {
+  .menu-information {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -723,7 +723,7 @@ button:hover::after {
   }
 }
 
-.menu_information .menu_card {
+.menu-information__name {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -734,16 +734,16 @@ button:hover::after {
 }
 
 @media (min-width: 960px) {
-  .menu_information .menu_card {
+  .menu-information__name {
     width: 32%;
   }
 }
 
-.menu_information .menu_card:first-of-type h2 {
+.menu-information__name:first-of-type h2 {
   margin-top: 0;
 }
 
-.menu_information .menu_card h2 {
+.menu-information__name h2 {
   text-transform: uppercase;
   position: relative;
   padding: 8px 0;
@@ -751,12 +751,12 @@ button:hover::after {
 }
 
 @media (min-width: 960px) {
-  .menu_information .menu_card h2 {
+  .menu-information__name h2 {
     margin-top: 0;
   }
 }
 
-.menu_information .menu_card h2::before {
+.menu-information__name h2::before {
   content: "";
   display: block;
   position: absolute;
@@ -767,7 +767,7 @@ button:hover::after {
   left: 0;
 }
 
-.menu_card_info {
+.menu-card {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -782,30 +782,38 @@ button:hover::after {
   border-radius: 25px 25px 25px 25px;
   opacity: 0;
   cursor: pointer;
+  -webkit-animation-name: Apparition;
+          animation-name: Apparition;
+  -webkit-animation-duration: 1000ms;
+          animation-duration: 1000ms;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
 }
 
-.menu_card_info .menu_card_text {
+.menu-card__text {
   min-width: 50px;
 }
 
-.menu_card_info .menu_card_text h3 {
+.menu-card__text h3 {
   min-width: 50px;
   margin-left: 20px;
 }
 
-.menu_card_info .menu_card_text p {
+.menu-card__text p {
   margin-top: 5px;
   margin-left: 20px;
 }
 
-.menu_card_info .menu_card_price {
+.menu-card__price {
   -ms-flex-negative: 1;
       flex-shrink: 1;
   margin-left: auto;
   margin-right: 20px;
 }
 
-.menu_card_info .menu-checkout {
+.menu-card__checkout {
   display: none;
   position: absolute;
   right: 0;
@@ -815,12 +823,12 @@ button:hover::after {
   background-color: #99e2d0;
 }
 
-.menu_card_info .menu-checkout i {
+.menu-card__checkout i {
   font-size: 2.8rem;
   color: #fff;
 }
 
-.menu_card_info:hover .menu-checkout {
+.menu-card:hover .menu-card__checkout {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -839,18 +847,7 @@ button:hover::after {
           animation: slide-left 300ms ease;
 }
 
-.menu_card_info:hover .menu-checkout i {
+.menu-card:hover .menu-card__checkout i {
   -webkit-animation: rotate 450ms linear 10ms 1 forwards;
           animation: rotate 450ms linear 10ms 1 forwards;
-}
-
-.menu_card_info {
-  -webkit-animation-name: Apparition;
-          animation-name: Apparition;
-  -webkit-animation-duration: 1000ms;
-          animation-duration: 1000ms;
-  -webkit-animation-timing-function: ease-in-out;
-          animation-timing-function: ease-in-out;
-  -webkit-animation-fill-mode: both;
-          animation-fill-mode: both;
 }

@@ -37,12 +37,12 @@
     }
 }
 
-.menu_information {
+.menu-information {
     @include lg {
         display: flex;
         justify-content: space-between;
     }
-    .menu_card {
+    &__name {
         display: flex;
         flex-direction: column;
 
@@ -76,7 +76,7 @@
     }
 }
 
-.menu_card_info {
+.menu-card {
     display: flex;
     flex-shrink: 1;
     align-items: center;
@@ -86,8 +86,12 @@
     @include borderRadius();
     opacity: 0;
     cursor: pointer;
+    animation-name: Apparition;
+    animation-duration: 1000ms;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: both;
 
-    .menu_card_text {
+    &__text {
         min-width: 50px;
         h3 {
             min-width: 50px;
@@ -102,13 +106,13 @@
         }
     }
 
-    .menu_card_price {
+    &__price {
         flex-shrink: 1;
         margin-left: auto;
         margin-right: 20px;
     }
 
-    .menu-checkout {
+    &__checkout {
         display: none;
         position: absolute;
         right: 0;
@@ -124,7 +128,7 @@
         }
     }
     
-    &:hover .menu-checkout {
+    &:hover &__checkout {
         // flex Shrink pour ne pas qu'il se rappetisse
         display: flex;
         flex-shrink: 0;
@@ -135,59 +139,9 @@
         animation: slide-left 300ms ease
     }
 
-    &:hover .menu-checkout i {
+    &:hover &__checkout i {
         animation: 
             rotate 450ms linear 10ms 1 forwards;
     }
 
-}
-// ----------------------- ANIMATION-----------------------------------
-
-
-
-// .card_entrees {
-//     .menu_card_info:nth-of-type(1) {
-//         animation: Apparition 1000ms ease-in-out 0s both;
-//     }
-//     .menu_card_info:nth-of-type(2) {
-//         animation: Apparition 1000ms ease-in-out 100ms both;
-//     }
-//     .menu_card_info:nth-of-type(3) {
-//         animation: Apparition 1000ms ease-in-out 200ms both;
-//     }
-//     .menu_card_info:nth-of-type(4) {
-//         animation: Apparition 1000ms ease-in-out 300ms both;
-//     }
-// }
-
-// .card_plat {
-//     .menu_card_info:nth-of-type(1) {
-//         animation: Apparition 1000ms ease-in-out 300ms both;
-//     }
-//     .menu_card_info:nth-of-type(2) {
-//         animation: Apparition 1000ms ease-in-out 400ms both;
-//     }
-//     .menu_card_info:nth-of-type(3) {
-//         animation: Apparition 1000ms ease-in-out 500ms both;
-//     }
-// }
-
-// .card_dessert {
-//     .menu_card_info:nth-of-type(1) {
-//         animation: Apparition 1000ms ease-in-out 600ms both;
-//     }
-//     .menu_card_info:nth-of-type(2) {
-//         animation: Apparition 1000ms ease-in-out 700ms both;
-//     }
-//     .menu_card_info:nth-of-type(3) {
-//         animation: Apparition 1000ms ease-in-out 800ms both;
-//     }
-// }
-
-
-.menu_card_info{
-    animation-name: Apparition;
-    animation-duration: 1000ms;
-    animation-timing-function: ease-in-out;
-    animation-fill-mode: both;
 }
