@@ -4,7 +4,7 @@
   "description": "Projet en SASS",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "sass": "sass --watch style.scss:css/style.css styleIndex.scss:css/styleIndex.css styleMenu.scss:css/styleMenu.css"
   },
   "repository": {
     "type": "git",
