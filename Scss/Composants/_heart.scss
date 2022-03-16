@@ -10,7 +10,6 @@
 
     svg {
         @include absolute-el(50%, auto, auto, 50%, -50%, -50%);
-
         width: 25px;
         height: 25px;
         opacity: 0;
@@ -22,3 +21,5 @@
         }
     }
 }
+
+

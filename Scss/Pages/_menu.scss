@@ -26,8 +26,9 @@
             font-size: 3rem;
         }
 
-        .heart {
-            margin-right: 20px;
+        .menu__heart{
+            position: relative;
+            align-self:flex-end;
         }
     }
 

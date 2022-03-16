@@ -714,8 +714,10 @@ button:hover::after {
   font-size: 3rem;
 }
 
-.menu .menu-header .heart {
-  margin-right: 20px;
+.menu .menu-header .menu__heart {
+  position: relative;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
 }
 
 .menu button {
