@@ -1,22 +1,22 @@
 {
-  "name": "p3_couhe_jean-philippe",
-  "version": "1.0.0",
-  "description": "Projet en SASS",
-  "main": "index.js",
-  "scripts": {
-    "sass": "sass --watch style.scss:css/style.css styleIndex.scss:css/styleIndex.css styleMenu.scss:css/styleMenu.css"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/jpcouhe/COUHEJean-philippe_3_19022022.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/jpcouhe/COUHEJean-philippe_3_19022022/issues"
-  },
-  "homepage": "https://github.com/jpcouhe/COUHEJean-philippe_3_19022022#readme",
-  "dependencies": {
-    "sass": "^1.49.9"
-  }
+    "name": "p3_couhe_jean-philippe",
+    "version": "1.0.0",
+    "description": "Projet en SASS",
+    "main": "index.js",
+    "scripts": {
+        "sass": "sass --watch style.scss:css/style.css style-index.scss:css/style-index.css style-menu.scss:css/style-menu.css"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/jpcouhe/COUHEJean-philippe_3_19022022.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/jpcouhe/COUHEJean-philippe_3_19022022/issues"
+    },
+    "homepage": "https://github.com/jpcouhe/COUHEJean-philippe_3_19022022#readme",
+    "dependencies": {
+        "sass": "^1.49.9"
+    }
 }
