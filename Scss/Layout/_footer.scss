@@ -1,5 +1,4 @@
-@use '../Utils/' as *;
-
+@use "../Utils/" as *;
 
 footer {
     background-color: $bgcolor_darkest;
@@ -25,7 +24,7 @@ footer {
                     font-size: 1.4rem;
 
                     i {
-                        @include center-logo(15px, 15px, auto);
+                        @include center-logo(15px, 15px, normal);
                         margin-right: 15px;
                     }
                 }

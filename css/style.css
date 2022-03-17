@@ -30,7 +30,7 @@
     transform: scaleX(0);
   }
   100% {
-    transform: scaleX(50px);
+    transform: scaleX(1);
   }
 }
 @keyframes opacityCheckout {
@@ -237,7 +237,7 @@ footer .footer_container ul li a {
 footer .footer_container ul li a i {
   width: 15px;
   height: 15px;
-  line-height: auto;
+  line-height: normal;
   margin-right: 15px;
 }
 

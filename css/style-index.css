@@ -30,7 +30,7 @@
     transform: scaleX(0);
   }
   100% {
-    transform: scaleX(50px);
+    transform: scaleX(1);
   }
 }
 @keyframes opacityCheckout {
@@ -84,7 +84,7 @@
   right: 10px;
   bottom: 10px;
   left: 10px;
-  transform: translate(auto, auto);
+  transform: translate(0%, 0%);
   border-radius: 100%;
   border: 5px solid transparent;
   border-left-color: #FF79DA;
